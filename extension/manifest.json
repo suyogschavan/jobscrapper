@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "linkedin Web Client",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "./assets/icon1.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.linkedin.com/*"], 
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
